@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: client-list-service
+  datasource:
+    url: jdbc:postgresql://client-database-postgres.czs9knssvwdy.us-east-1.rds.amazonaws.com:5432/clientdb
+    username: postgres
+    password: postgres123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
