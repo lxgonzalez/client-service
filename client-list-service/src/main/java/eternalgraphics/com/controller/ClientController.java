@@ -20,8 +20,8 @@ public class ClientController {
 
     @GetMapping
     public ResponseEntity<List<Client>> findALl() {
-        List<Client> patientList = clientService.findAll();
-        return new ResponseEntity<>(patientList, HttpStatus.OK);
+        List<Client> clientList = clientService.findAll();
+        return new ResponseEntity<>(clientList, HttpStatus.OK);
     }
 
     @GetMapping("/{idClient}")
