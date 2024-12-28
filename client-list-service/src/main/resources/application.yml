@@ -2,11 +2,14 @@ spring:
   application:
     name: client-list-service
   datasource:
-    url: jdbc:postgresql://client-database-postgres.czs9knssvwdy.us-east-1.rds.amazonaws.com:5432/clientdb
-    username: postgres
-    password: postgres123
+    url: jdbc:postgresql://${DATASOURCE_URL}:${DATASOURCE_PORT}/${DATABASE}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     database: postgresql
     hibernate:
       ddl-auto: update
+server:
+  port: 80
+
