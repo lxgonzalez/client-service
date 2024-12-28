@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/client")
+@RequestMapping("/")
 public class ClientController {
     @Autowired
     private IClientService clientService;
@@ -21,7 +21,7 @@ public class ClientController {
         return new ResponseEntity<>("Add Client microservice is running...", HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping("/client")
     public ResponseEntity<Client> updateClient(@RequestBody Client client) {
         Client clienteCreated = clientService.saveClient(client);
         if(clienteCreated == null){
