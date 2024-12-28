@@ -18,7 +18,7 @@ public class ClientController {
 
     @GetMapping
     public ResponseEntity<String> checkService(){
-        return new ResponseEntity<>("Add Client microservice is running...", HttpStatus.OK);
+        return new ResponseEntity<>("Add Client microservice is running", HttpStatus.OK);
     }
 
     @PostMapping
