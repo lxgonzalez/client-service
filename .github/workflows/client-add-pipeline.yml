@@ -6,11 +6,13 @@ on:
       - test
     paths:
       - 'client-add-service/**'
+      - '.github/workflows/client-add-pipeline.yml'
   pull_request:
     branches: 
       - test
     paths:
       - 'client-add-service/**'
+      - '.github/workflows/client-add-pipeline.yml'
 jobs:
   build-and-push-docker:
     runs-on: ubuntu-latest
