@@ -13,23 +13,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/client")
 public class ClientController {
     @Autowired
     private IClientService clientService;
 
     @GetMapping
-    public ResponseEntity<String> checkService(){
-        return new ResponseEntity<>("List Client microservice is running...", HttpStatus.OK);
-    }
-
-    @GetMapping("/client")
     public ResponseEntity<List<Client>> findALl() {
         List<Client> clientList = clientService.findAll();
         return new ResponseEntity<>(clientList, HttpStatus.OK);
     }
 
-    @GetMapping("/client/{idClient}")
+    @GetMapping("/{idClient}")
     public ResponseEntity<Client> findById(@PathVariable int idClient) {
         Client client = clientService.findById(idClient);
         return new ResponseEntity<>(client, HttpStatus.OK);
