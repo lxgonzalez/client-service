@@ -58,8 +58,33 @@ Visit the repository on Docker Hub [here](https://hub.docker.com/r/lxgonzalez/cl
 
    To create a new client, send a POST request in JSON format to the following endpoint: [http://localhost:80/client](http://localhost:80/client)
 
-
-
+   **Request Body Example**
+   ```bash
+   {
+    "idClient": 1,
+    "firstName": "Xavier",
+    "lastName": "Doe",
+    "email": "xavier.doe@example.com",
+    "password": "newSecurePass123",
+    "phoneNumber": "0998765432",
+    "address": "456 Elm Street, Quito"
+   }
+    ```
+   
+   **Example using curl:**
+   ```bash
+   curl --location --request POST 'http://localhost:80/client' \
+   --header 'Content-Type: application/json' \
+   --data-raw '{
+       "idClient": 1,
+       "firstName": "Xavier",
+       "lastName": "Doe",
+       "email": "xavier.doe@example.com",
+       "password": "newSecurePass123",
+       "phoneNumber": "0998765432",
+       "address": "456 Elm Street, Quito"
+   }'
+   ```
 ---
 ## 📽️ Evidence
 
