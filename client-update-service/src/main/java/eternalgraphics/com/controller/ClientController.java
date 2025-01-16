@@ -21,7 +21,7 @@ public class ClientController {
         return new ResponseEntity<>("Update Client microservice is running...", HttpStatus.OK);
     }
 
-    @PostMapping("/client")
+    @PutMapping("/client")
     public ResponseEntity<Client> updateClient(@RequestBody Client client) {
         Client clientUpdate = clientService.updateClient(client);
         if(clientUpdate == null){
