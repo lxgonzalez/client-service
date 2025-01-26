@@ -27,6 +27,9 @@ public class Client {
     @Column(length = 255, nullable = true)
     private String accessToken;
 
+    @Column(length = 20, nullable = false)
+    private String groupName;
+
     public Integer getIdClient() {
         return idClient;
     }
@@ -81,5 +84,13 @@ public class Client {
 
     public void setAccessToken(String accessToken) {
         this.accessToken = accessToken;
+    }
+
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 }
