@@ -9,38 +9,38 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
 
-    @Column(length = 20, nullable = false)
-    private String firstName;
-
-    @Column(length = 20, nullable = false)
-    private String lastName;
+    @Column(length = 255, nullable = false, unique = true)
+    private String sub;
 
     @Column(length = 70, nullable = false)
     private String email;
 
-    @Column(length = 20, nullable = false, unique = true)
-    private String password;
+    @Column(length = 20, nullable = false)
+    private String givenName;
 
-    @Column(length = 10, nullable = false)
-    private String phoneNumber;
+    @Column(length = 20, nullable = false)
+    private String familyName;
 
-    @Column(length = 250, nullable = false)
-    private String address;
+    @Column(length = 255, nullable = true)
+    private String picture;
 
-    public String getFirstName() {
-        return firstName;
+    @Column(length = 255, nullable = true)
+    private String accessToken;
+
+    public Integer getIdClient() {
+        return idClient;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setIdClient(Integer idClient) {
+        this.idClient = idClient;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getSub() {
+        return sub;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setSub(String sub) {
+        this.sub = sub;
     }
 
     public String getEmail() {
@@ -51,19 +51,35 @@ public class Client {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getGivenName() {
+        return givenName;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setGivenName(String givenName) {
+        this.givenName = givenName;
     }
 
-    public String getAddress() {
-        return address;
+    public String getFamilyName() {
+        return familyName;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setFamilyName(String familyName) {
+        this.familyName = familyName;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getAccessToken() {
+        return accessToken;
+    }
+
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
     }
 }
