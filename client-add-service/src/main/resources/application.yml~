@@ -14,4 +14,4 @@ server:
   port: 8010
 
 broker:
-  url: ${BROKER_URL}
+  url: ws://localhost:8090
