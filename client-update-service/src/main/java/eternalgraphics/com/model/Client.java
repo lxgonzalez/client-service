@@ -9,26 +9,23 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
 
-    @Column(length = 255, nullable = false, unique = true)
-    private String sub;
-
-    @Column(length = 70, nullable = false)
+    @Column(length = 70, nullable = false, unique = true)
     private String email;
-
-    @Column(length = 20, nullable = false)
-    private String givenName;
 
     @Column(length = 20, nullable = false)
     private String familyName;
 
+    @Column(length = 20, nullable = false)
+    private String givenName;
+
     @Column(length = 255, nullable = true)
     private String picture;
 
-    @Column(length = 255, nullable = true)
-    private String accessToken;
-
     @Column(length = 20, nullable = false)
-    private String groupName;
+    private String rol;
+
+    @Column(length = 255, nullable = false, unique = true)
+    private String sub;
 
     public Integer getIdClient() {
         return idClient;
@@ -78,19 +75,12 @@ public class Client {
         this.picture = picture;
     }
 
-    public String getAccessToken() {
-        return accessToken;
+    public String getRol() {
+        return rol;
     }
 
-    public void setAccessToken(String accessToken) {
-        this.accessToken = accessToken;
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
-    public String getGroupName() {
-        return groupName;
-    }
-
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
-    }
 }
