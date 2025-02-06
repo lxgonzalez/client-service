@@ -37,7 +37,7 @@ jobs:
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.EC2_HOST_EMAIL }}
+          host: ${{ secrets.EC2_HOST_TEST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script: |
@@ -52,4 +52,4 @@ jobs:
                        -e DATASOURCE_PASSWORD=${{secrets.DATASOURCE_PASSWORD}} \
                        -e WEBSOCKET_URL=${{secrets.WEBSOCKET_URL}} \
                        -d --name ${{secrets.DOCKER_IMAGE_EMAIL}} \
-                       -p 80:80 ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMAGE_EMAIL}}:latest
+                       -p 1030:1030 ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMAGE_EMAIL}}:latest
