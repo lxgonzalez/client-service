@@ -31,7 +31,7 @@ Follow these steps to run the API on your local machine:
 
    Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/lxgonzalez/client-add-service.git
+   git clone https://github.com/lxgonzalez/client-service
    
 2. **Install Dependencies**
    
