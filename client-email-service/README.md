@@ -1,6 +1,6 @@
-# 📧 **Client Email Verification Microservice**
+# 📧 **Find Client By Email Microservice**
 
-The **Client Email Verification Service** is a Spring Boot microservice designed to check if a client is registered in the system by their email address. It provides a RESTful API endpoint to fetch client details or return an error if the client does not exist.
+The **Find client by email** is a Spring Boot microservice designed to check if a client is registered in the system by their email address. It provides a RESTful API endpoint to fetch client details or return an error if the client does not exist.
 
 ---
 
@@ -80,9 +80,8 @@ Follow these steps to run the API on your local machine:
 
 ---
 ## 📽️ Evidence
-   
+![image](https://github.com/user-attachments/assets/9f98ca83-bc67-427d-85e6-6adc4eec935c)
 
-   
    
 
    
