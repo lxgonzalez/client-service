@@ -18,14 +18,14 @@ public class Client {
     @Column(length = 20, nullable = false)
     private String givenName;
 
-    @Column(length = 255, nullable = true)
-    private String picture;
-
-    @Column(length = 20, nullable = false)
+    @Column(length = 20)
     private String rol;
 
-    @Column(length = 255, nullable = false, unique = true)
-    private String sub;
+    @Column(length = 255, nullable = false)
+    private String password;
+
+    @Column(length = 10, nullable = false)
+    private String dob;
 
     public Integer getIdClient() {
         return idClient;
@@ -35,13 +35,6 @@ public class Client {
         this.idClient = idClient;
     }
 
-    public String getSub() {
-        return sub;
-    }
-
-    public void setSub(String sub) {
-        this.sub = sub;
-    }
 
     public String getEmail() {
         return email;
@@ -67,14 +60,6 @@ public class Client {
         this.familyName = familyName;
     }
 
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
     public String getRol() {
         return rol;
     }
@@ -83,4 +68,19 @@ public class Client {
         this.rol = rol;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
 }

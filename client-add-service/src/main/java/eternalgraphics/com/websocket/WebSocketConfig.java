@@ -49,18 +49,18 @@ public class WebSocketConfig extends WebSocketClient {
     @Override
     public void onMessage(String message) {
         System.out.println("Received message: " + message);
-        if (message.contains("register-client")) {
+        if (message.contains("\"event\":\"register-client\"")) {
             try {
-                String clientData = message.split("\"data\":")[1].split(",\"topic\"")[0].trim();
-                JsonNode data = objectMapper.readTree(clientData);
+                JsonNode data = objectMapper.readTree(message);
 
                 Client client = new Client();
-                client.setSub(data.get("sub").asText());
-                client.setFamilyName(data.get("familyName").asText());
-                client.setGivenName(data.get("givenName").asText());
                 client.setEmail(data.get("email").asText());
-                client.setPicture(data.get("picture").asText());
-                client.setRol(data.get("rol").asText());
+                client.setGivenName(data.get("firstName").asText());
+                client.setFamilyName(data.get("lastName").asText());
+                client.setPassword(data.get("password").asText());
+                client.setDob(data.get("dob").asText());
+                client.setRol(data.get("role").asText());
+
                 clientService.saveClient(client);
                 responseFuture.complete(message);
 
