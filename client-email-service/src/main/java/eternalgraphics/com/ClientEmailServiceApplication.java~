@@ -1,0 +1,5 @@
+package eternalgraphics.com;
+
+public class ClientEmailServiceApplication implements ClientEmailServiceApplicationInterface{
+    
+}

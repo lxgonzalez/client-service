@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: client-list-service
+  datasource:
+    url: jdbc:postgresql://${DATASOURCE_URL}:${DATASOURCE_PORT}/${DATABASE}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+server:
+  port: 1030
